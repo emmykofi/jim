@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% load static from staticfiles %}
+
+{% block title %}Contact Us!{% endblock %}
+
+
+{% block content %}
+
+<h1>Information Page</h1>
+
+<img src="{% static "css/aero.jpg" %}" (width = 300, height = 250, crop = 'fill') alt="My image"/>
+
+<p>We are here to serve you 24/7. Our friendly staff there to serve yo and assist you with all the information tha you need.<br>Provided below is our contact information.<br><br><br><h5>Harare Offices<br></h5>P.O.Box<br>Harare, Zimbabwe<br>Tel: +263-4-12345<br>Emai: emy@gmail.com<br><br><br><h3>Bulawayo Offices<br></h3>P.O.Box 234<br>Bulawayo, Zimbabwe<br>Tel: +263-4-6789<br>Email: bemy@gmil.com<br><br><br><h3>South Africa Offices<br></h3>P.O.Box 567<br>Jburg, South Africa<br>Tel: +27-4-6789<br>Email: jburgemy@gmil.com</p>
+
+<h3>Quick links to our social sites</h3>
+
+<a href="https://www.facebook.com/">
+<img src="{% static "css/facebook.png" %}" (width = 30, height = 30, crop = 'fill') alt="face"/>
+</a>
+<a href="https://www.instagram.com/?hl=en">
+<img src="{% static "css/insta.jpg" %}" (width = 30, height = 30, crop = 'fill') alt="instagram"/>
+</a>
+<a href="https://twitter.com/">
+<img src="{% static "css/twitter.jpg" %}" (width = 30, height = 30, crop = 'fill') alt="tweet"/>
+</a>
+<a href="https://www.linkedin.com/nhome/?trk=">
+<img src="{% static "css/link.jpg" %}" (width = 30, height = 30, crop = 'fill') alt="linkden"/>
+</a>
+
+<footer>&copyCopyright 2016 Emelda Airline. All rights reserved</footer>
+
+
+{% endblock %}

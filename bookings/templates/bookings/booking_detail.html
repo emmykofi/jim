@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% load humanize %}
+{% load book_extra %}
+
+{% block title %}{{ booking.title }}{% endblock %}
+
+{% block content %}
+<article>
+	<h2>{{ booking.title }}</h2>
+	{{ booking.description|markdown_to_html }}
+
+	<section>
+		{% for step in steps %}
+			<h3>
+				<a href="{{ step.get_absolute_url }}">{{ step.title }}</a>
+			</h3>
+			{{ step.description }}
+		{% endfor %}
+	</section>
+</article>
+{% endblock %}
+

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% load static from staticfiles %}
+
+{% block static %}<link rel="stylesheet" href="{% static 'bookings/css/bookings.css' %}">{% endblock %}
+{% block title %}Available Flights{% endblock %}
+
+{% block content %}
+<div class="cards">
+	{% for booking in bookings %}
+	<div class="card">
+		<header><a href="{% url 'bookings:detail' pk=booking.pk %}">{{ booking.title  }}</a></header>
+		<div class="card=copy">
+			{% if booking.description|wordcount <= 5 %}
+				{{ booking.description }}
+			{% else %}
+				{{ booking.description|truncatewords:5 }}
+				<a href="{% url 'bookings:detail' pk=booking.pk %}">Read more</a>
+			{% endif %}
+	    </div>
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}

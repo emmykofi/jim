@@ -1,0 +1,3 @@
+{% for booking in bookings %}
+	<div><a href="{% url 'bookings:detail' pk=booking.pk %}{{ booking.title }}"></a></div>
+{% endfor %}
